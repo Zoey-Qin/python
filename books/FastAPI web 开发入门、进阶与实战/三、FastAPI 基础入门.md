@@ -33,6 +33,20 @@ async def exception_not_found(request, exc):
 exception_handlers = {
     404: exception_not_found,
 }
-app = FastAPI(exception_handlers=exceptio)
+app = FastAPI(exception_handlers=exception_handlers)
 ```
 
+
+
+
+
+# API 端点路由注册和匹配
+
+- 在 FastAPI 框架中，所有的注册路由都会统一保存到 app.routes 中
+- 如果需要查看当前应用注册的所有路由信息，那么在启动服务后打印输出app.routes值即可
+
+
+
+## 路由节点元数据
+
+- 元数据是一组用于描述数据的数据，主要用于组织、查找和理解数据（通常指描述数据属性的信息）
